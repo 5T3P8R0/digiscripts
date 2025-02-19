@@ -1,3 +1,6 @@
+//THIS CODE DOESN'T WORK ;)
+
+
 #include "DigiKeyboard.h"
 
 void setup() {
@@ -16,8 +19,8 @@ void setup() {
     DigiKeyboard.delay(4000);
 
     // Open DevTools (F12)
-    DigiKeyboard.sendKeyStroke(KEY_F12);
-    DigiKeyboard.delay(1000);
+    //DigiKeyboard.sendKeyStroke(KEY_I, MOD_CONTROL_LEFT | MOD_SHIFT_LEFT);
+   // DigiKeyboard.delay(1000);
 
     // Open Console (Ctrl + Shift + J)
     DigiKeyboard.sendKeyStroke(KEY_J, MOD_CONTROL_LEFT | MOD_SHIFT_LEFT);
